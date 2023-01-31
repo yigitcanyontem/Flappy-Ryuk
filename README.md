@@ -1,7 +1,7 @@
 
 # NotePad
 
-Death Note inspired Flappy Bird style Android game made with Unity.
+Death Note inspired Flappy Bird style game made with Unity.
 
 ## ScreenShots
 
@@ -19,7 +19,7 @@ Start Adding Notes
 
 
 ## How to Use 
-- Install on your phone using the apk file
+- Install on your phone using the apk file or run the exe file on your pc
   
 ## About Game
 - Red Apple +1 point
