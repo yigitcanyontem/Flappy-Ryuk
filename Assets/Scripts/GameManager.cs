@@ -14,6 +14,9 @@ public class GameManager : MonoBehaviour
     public Sprite OffSprite;
     public Sprite OnSprite;
     public Button but;
+    public Text highscore;
+    public Text highest;
+    public int record;
 
     public void Awake() {
         Application.targetFrameRate = 144;
@@ -32,13 +35,15 @@ public class GameManager : MonoBehaviour
         {
             but.image.sprite = OnSprite;
         }
-       
+
 
         score = 0;
         scoretext.text = score.ToString();
 
         playButton.SetActive(false);
         gameover.text = "";
+        highscore.text = "";
+        highest.text = "";
 
         Time.timeScale = 1f;
         player.enabled = true;
@@ -59,8 +64,9 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         playButton.SetActive(true);
-        gameover.text = "GAME OVER\n"+ score.ToString();
-
+        gameover.text = "GAME OVER";
+        highest.text = "highest score";
+        highscore.text = record.ToString();
         Pause();
     }
 
@@ -68,7 +74,10 @@ public class GameManager : MonoBehaviour
     {
         score += scores;
         scoretext.text = score.ToString();
+        if (score > record)
+        {
+            record = score;
+        }
     }
 
-    
 }
